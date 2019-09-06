@@ -1,7 +1,5 @@
 package com.bobo.common.utils;
 
-import static org.junit.Assert.fail;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -9,8 +7,26 @@ import java.util.Date;
 import org.junit.Test;
 
 public class DateUtilTest {
-
+	
+	
 	@Test
+	public void testRandomDate() {
+		Calendar c = Calendar.getInstance();
+		c.set(2010, 0, 1);
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
+		for (int i = 0; i <10; i++) {
+		
+			Date date = DateUtil.randomDate(c.getTime(), new Date());
+			String string = df.format(date);
+			System.out.println(string);
+			
+		}
+		
+	}
+	
+	
+		@Test
 	public void testGetDateByInitMonth() {
 		
 		Calendar c = Calendar.getInstance();
@@ -63,6 +79,5 @@ String sql = "select * from t_order where create_time>='{1}'
 	
 	//思考题: 根据给定的生日,计算其年龄   
 	//思考题: 返回18-65岁之间的随机日期
-	
 
 }

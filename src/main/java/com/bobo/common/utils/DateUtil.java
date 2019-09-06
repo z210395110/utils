@@ -4,6 +4,28 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
+	
+	
+	
+	
+	//返回一个在某个时间段的随机日期
+	
+	public static Date randomDate(Date minDate ,Date maxDate) {
+		//从1970年到minDate的毫米数
+		long l1 = minDate.getTime();
+		//从1970年到maxDate的毫米数
+		long l2 = maxDate.getTime();
+		
+		Calendar c = Calendar.getInstance();
+		
+	//	
+		long l3 = (long) (Math.random() * (l2-l1 +1 )+l1);
+		c.setTimeInMillis(l3);
+		
+		return c.getTime();
+		
+		
+	}
 
 	
 	/*
