@@ -1,10 +1,12 @@
-package com.bobo.common.utils;
+package com.zsx.common.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Test;
+
+import com.zsx.common.utils.DateUtil;
 
 public class DateUtilTest {
 	

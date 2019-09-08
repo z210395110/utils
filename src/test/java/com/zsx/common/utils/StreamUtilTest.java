@@ -1,4 +1,4 @@
-package com.bobo.common.utils;
+package com.zsx.common.utils;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import org.junit.Test;
+
+import com.zsx.common.utils.StreamUtil;
 
 public class StreamUtilTest {
 

@@ -1,9 +1,11 @@
-package com.bobo.common.utils;
+package com.zsx.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 public class StringUtil {
+	
+
 	
 	/**
 	 * 
