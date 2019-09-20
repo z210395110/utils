@@ -17,7 +17,8 @@ public class StringUtil {
 	 */
 	public static String toHtml(String src) {
 		
-		String str = src.replaceAll(System.getProperty("line.separator"), "|")	;
+		String str1 = src.replaceAll(System.getProperty("line.separator"), "|");
+		String str = str1.replaceAll("\\r", "</br>");
 		String[] split = str.split("\\|");
 		String newStr="";
 		for (String string2 : split) {
@@ -82,6 +83,7 @@ public class StringUtil {
 	public static boolean hasText(String src) {
 		return null != src && src.trim().length() > 0;
 	}
+	
 
 	// 产生随机中文 包含繁体
 	public static String randomSimpleChinese() {

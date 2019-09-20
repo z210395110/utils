@@ -4,7 +4,22 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
-	
+	/**
+	 * 
+	 * @Title: getDateByMonthSub 
+	 * @Description: 让当前日期减去对应的月份
+	 * @param month
+	 * @return
+	 * @return: Date
+	 */
+	public static Date getDateByMonthSub(Date date,Integer month) {
+		Calendar c= Calendar.getInstance();
+		//用传入的日期初始化日历类
+		c.setTime(date);
+		//减去传入 的月份
+		c.add(Calendar.MONTH, -month);
+		return c.getTime();
+	}
 	
 	
 	
